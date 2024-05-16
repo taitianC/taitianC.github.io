@@ -15,17 +15,16 @@
 <meta property="og:site_name" content="taitian的个人博客">
 <meta property="og:description" content="HTML的简单认识">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2024/05/11/html%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/png/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-05-11%20152611.png">
-<meta property="og:image" content="http://example.com/2024/05/11/html%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/png/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-05-12%20230350.png">
-<meta property="og:image" content="http://example.com/2024/05/11/html%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/png/taitian.jpg">
+<meta property="og:image" content="http://example.com/png/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-05-11%20152611.png">
+<meta property="og:image" content="http://example.com/png/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-05-12%20230350.png">
 <meta property="og:image" content="d:\desktop\taitianc.jpg">
 <meta property="og:image" content="http://example.com/2024/05/11/html%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/png/taitian.jpg">
 <meta property="article:published_time" content="2024-05-11T06:16:00.000Z">
-<meta property="article:modified_time" content="2024-05-12T15:35:22.977Z">
+<meta property="article:modified_time" content="2024-05-13T06:50:51.155Z">
 <meta property="article:author" content="taitian">
 <meta property="article:tag" content="html">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2024/05/11/html%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/png/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-05-11%20152611.png">
+<meta name="twitter:image" content="http://example.com/png/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-05-11%20152611.png">
   
     <link rel="alternative" href="/atom.xml" title="taitian的个人博客" type="application/atom+xml">
   
@@ -221,7 +220,7 @@ HTML，中文名又称超文本标记语言，目前版本已经更新到了HTML
 &lt;/head&gt;
 </code></pre>
 <p>如下图所示：</p>
-<p><img src="./png/屏幕截图 2024-05-11 152611.png"></img></p>
+<p><img src="/./png/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-05-11%20152611.png" alt="本地路径"> </p>
 <h3 id="h1到h6标签"><a href="#h1到h6标签" class="headerlink" title="h1到h6标签"></a>h1到h6标签<hr></h3><p>h1到h6标签是一系列从大到小的标题标签，其中h1最大，h6最小</p>
 <pre><code>&lt;h1&gt;taitian&lt;/h1&gt;
 &lt;h2&gt;taitian&lt;/h2&gt;
@@ -419,7 +418,7 @@ a
 &lt;/table&gt;
 </code></pre>
 <p>实现的效果如下：</p>
-<p><img src="./png/屏幕截图 2024-05-12 230350.png"></img></p>
+<p><img src="/./png/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-05-12%20230350.png" alt="本地路径"></p>
 <p>可以看到单元格之间还有缝隙，而这个缝隙的宽度的值就是border元素的值1。</p>
 <hr>
 我们再次添加新的元素cellspacing，
@@ -686,7 +685,8 @@ target=&quot;_black&quot;&gt;taitian的个人博客&lt;/a&gt;
 <h3 id="图片标签img"><a href="#图片标签img" class="headerlink" title="图片标签img"></a>图片标签img</h3><p>图片也是网页当中常见的元素之一，在网页当中插入图片要用到的标签是img，以下是一个插入我本地电脑桌面图片的示例</p>
 <pre><code>&lt;img src=&quot;D:\desktop\taitian.jpg&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;
 </code></pre>
-<p>其中src属性可以是一个本地的文件，也可以是一个网页图片的链接。width属性来限制宽度，height属性来限制高度，如果只给其中任意一个，会自动按照图片原来的纵横比来缩放图片。实现的效果如下：<br><img src="./png/taitian.jpg" width="100" height="100"></p>
+<p>其中src属性可以是一个本地的文件，也可以是一个网页图片的链接。width属性来限制宽度，height属性来限制高度，如果只给其中任意一个，会自动按照图片原来的纵横比来缩放图片。实现的效果如下：</p>
+<p>![本地路径](.&#x2F;png&#x2F;taitian.jpg &#x3D;100x100)</p>
 <h4 id="alt属性"><a href="#alt属性" class="headerlink" title="alt属性"></a>alt属性</h4><p>alt属性是一个有意思的属性当图片无法正常显示时，alt属性中的内容会在图片的位置显示</p>
 <pre><code>&lt;img src=&quot;D:\desktop\taitianc.jpg&quot; width=&quot;100&quot; height=&quot;100&quot;
 alt=&quot;酷酷的人&quot;&gt;
@@ -1069,8 +1069,8 @@ alt=&quot;酷酷的人&quot; title=&quot;taitian&quot;&gt;
 <nav id="article-nav">
   
   
-    <a href="/2024/05/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的第一篇博客</div>
+    <a href="/2024/05/11/%E5%9F%BA%E6%9C%AC%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">基本的输入输出</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -1217,6 +1217,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">C++,算法</a>
               </li>
             
             <div class="clearfix"></div>
