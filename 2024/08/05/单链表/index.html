@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: 算法 | taitian的个人博客</title>
+  <title>我的第一个哔哩哔哩作品 | taitian的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="你也走了很远的路吧。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="taitian的个人博客">
-<meta property="og:url" content="http://example.com/tags/%E7%AE%97%E6%B3%95/index.html">
+  <meta name="description" content="单链表">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的第一个哔哩哔哩作品">
+<meta property="og:url" content="http://example.com/2024/08/05/%E5%8D%95%E9%93%BE%E8%A1%A8/index.html">
 <meta property="og:site_name" content="taitian的个人博客">
-<meta property="og:description" content="你也走了很远的路吧。">
+<meta property="og:description" content="单链表">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-08-05T03:30:22.000Z">
+<meta property="article:modified_time" content="2024-08-05T03:31:03.973Z">
 <meta property="article:author" content="taitian">
 <meta name="twitter:card" content="summary">
   
@@ -158,60 +160,212 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-单链表" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2024" class="archive-year">2024</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/05/22/CFF%E9%80%89%E6%8B%94%E8%B5%9B%E9%83%A8%E5%88%86%E9%A2%98%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2024-05-22T07:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-05-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/05/22/CFF%E9%80%89%E6%8B%94%E8%B5%9B%E9%83%A8%E5%88%86%E9%A2%98%E8%A7%A3/">CFF选拔赛部分题解</a>
+    <h1 class="article-title" itemprop="name">
+      我的第一个哔哩哔哩作品
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        <!--显示阅读次数-->
 
-          
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+  
+        
+        <a href="/2024/08/05/%E5%8D%95%E9%93%BE%E8%A1%A8/" class="archive-article-date">
+  	<time datetime="2024-08-05T03:30:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h1><span id="more"></span>
+<p>我们都知道，对于顺序表而言，它最大的缺点是插入和删除需要移动大量的元素，为了解决这种不方便，前人发明了链表。链表有很多类型，在此，我们暂时只介绍单链表。</p>
+<p>单链表和顺序表一样，也是由很多的节点组成，与顺序表不同的是，单链表的每个节点由两部分组成，一部分是数据域，一部分是指针域。</p>
+<h2 id="单链表的插入"><a href="#单链表的插入" class="headerlink" title="单链表的插入"></a>单链表的插入</h2><p>给定一个索引i和一个元素data，生成一个值为data的节点，并且插入到第i个位置上。</p>
+<h3 id="插入的步骤"><a href="#插入的步骤" class="headerlink" title="插入的步骤"></a>插入的步骤</h3><p>第一步，判断插入的位置是否合法，如果不合法抛出异常。</p>
+<p>第二步，对给定的元素生成一个链表节点。</p>
+<p>第三步，如果插入的位置是0，则直接把生成的节点的后继节点，设置为当前的链表的头节点，并且把生成的节点设置为新的链表头。</p>
+<p>第四步，如果插入的位置不是0，则遍历到插入位置的前一个位置，把生成的节点插入进来。</p>
+<p>第五步，更新链表的大小。</p>
+<h2 id="单链表的删除"><a href="#单链表的删除" class="headerlink" title="单链表的删除"></a>单链表的删除</h2><p>给定一个索引i，将索引为i的元素删除。</p>
+<h3 id="删除的步骤"><a href="#删除的步骤" class="headerlink" title="删除的步骤"></a>删除的步骤</h3><p>第一步，判断删除的位置是否合法，如果不合法抛出异常。</p>
+<p>第二步，如果插入的位置是首个节点，则直接把链表头更新为它的后继节点。</p>
+<p>第三步，如果删除的位置不是首个节点，则遍历到删除位置的前一个节点，并把前一个节点的后继节点设置为它后继的后继。</p>
+<p>第四步，更新链表的大小。</p>
+<h2 id="单链表的查找"><a href="#单链表的查找" class="headerlink" title="单链表的查找"></a>单链表的查找</h2><p>在链表中查找指定元素x是否存在，如果存在则返回该节点，否则返回null。</p>
+<h3 id="查找的步骤"><a href="#查找的步骤" class="headerlink" title="查找的步骤"></a>查找的步骤</h3><p>第1步、遍历整个链表，对链表中的每个元素，和指定元素进行比较，果相等则返回当前遍历的结点;</p>
+<p>第2步、如果遍历完整个链表，都没有找到相等的元素，则返回 NULL。</p>
+<h2 id="单链表的元素索引"><a href="#单链表的元素索引" class="headerlink" title="单链表的元素索引"></a>单链表的元素索引</h2><p>给定一个索引i，从链表的头节点开始遍历，遍历到第i个节点并返回z这个节点	。</p>
+<h3 id="元素索引的步骤"><a href="#元素索引的步骤" class="headerlink" title="元素索引的步骤"></a>元素索引的步骤</h3><p>第一步，判断索引是否合法。</p>
+<p>第二步，通过索引获得对应元素。</p>
+<h2 id="单链表的元素修改"><a href="#单链表的元素修改" class="headerlink" title="单链表的元素修改"></a>单链表的元素修改</h2><p>给定一个索引i和data，将指定索引位置元素的值修改为data。</p>
+<h3 id="修改的步骤"><a href="#修改的步骤" class="headerlink" title="修改的步骤"></a>修改的步骤</h3><p>第一步，判断索引是否合法。</p>
+<p>第二步，通过索引获得对应元素。</p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>我们选用C++代码实现，相关代码如下，不过光是有代码是不够的，我们要自己会写，如果写代码有困难，可以移步我的哔哩哔哩账号观看视频，当中有对代码的讲解，如果有帮助到你，请点赞投币评论支持我吧。你们的支持就是我更新的最大的动力。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define eleType double</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">struct ListNode&#123;</span><br><span class="line">	eleType data;</span><br><span class="line">	ListNode* next;</span><br><span class="line">	ListNode(eleType x) &#123;</span><br><span class="line">		this-&gt;data = x;</span><br><span class="line">		this-&gt;next = NULL;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">class LinkedList&#123;</span><br><span class="line">private:</span><br><span class="line">	ListNode* head;</span><br><span class="line">	int size;</span><br><span class="line">public:</span><br><span class="line">	LinkedList() &#123;</span><br><span class="line">		this-&gt;head = NULL;</span><br><span class="line">		this-&gt;size = 0;</span><br><span class="line">	&#125;</span><br><span class="line">	~LinkedList();</span><br><span class="line">	void insert(int i, eleType value);</span><br><span class="line">	void remove(int i);</span><br><span class="line">	ListNode* find(eleType value);</span><br><span class="line">	ListNode* get(int i);</span><br><span class="line">	void updata(int i, eleType value);</span><br><span class="line">	void show();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">LinkedList::~LinkedList()&#123;</span><br><span class="line">	ListNode* curr = head;</span><br><span class="line">	while (curr)&#123;</span><br><span class="line">		ListNode* tmp = curr;</span><br><span class="line">		curr = tmp-&gt;next;</span><br><span class="line">		delete tmp;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">void LinkedList::insert(int i, eleType value) &#123;</span><br><span class="line">	if (i&lt;0 || i&gt;this-&gt;size) &#123;</span><br><span class="line">		throw out_of_range(&quot;invalid position&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	ListNode * newnode= new ListNode(value);</span><br><span class="line">	if (i == 0) &#123;</span><br><span class="line">		newnode-&gt;next = head;</span><br><span class="line">		this-&gt;head = newnode;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		ListNode* curr = head;</span><br><span class="line">		for (int j = 0; j &lt; i - 1; j++) &#123;</span><br><span class="line">			curr = curr-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">		newnode-&gt;next = curr-&gt;next;</span><br><span class="line">		curr-&gt;next = newnode;</span><br><span class="line">	&#125;</span><br><span class="line">	this-&gt;size++;</span><br><span class="line">&#125;</span><br><span class="line">void LinkedList::remove(int i) &#123;</span><br><span class="line">	if (i&lt;0 || i&gt;this-&gt;size-1) &#123;</span><br><span class="line">		throw out_of_range(&quot;invalid position&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	if (i == 0) &#123;</span><br><span class="line">		ListNode* tmp = head;</span><br><span class="line">		head = head-&gt;next;</span><br><span class="line">		delete tmp;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		ListNode* curr = head;</span><br><span class="line">		for (int j = 0; j &lt; i - 1; j++) &#123;</span><br><span class="line">			curr = curr-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">		ListNode* tmp = curr-&gt;next;</span><br><span class="line">		curr-&gt;next = tmp-&gt;next;</span><br><span class="line">		//curr-&gt;next = curr-&gt;next-&gt;next;</span><br><span class="line">		delete tmp;</span><br><span class="line">	&#125;</span><br><span class="line">	this-&gt;size--;</span><br><span class="line">&#125;</span><br><span class="line">ListNode* LinkedList::find(eleType value) &#123;</span><br><span class="line">	ListNode* curr = head;</span><br><span class="line">	while ( curr &amp;&amp;curr-&gt;data != value) &#123;</span><br><span class="line">		curr = curr-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	return curr;</span><br><span class="line">&#125;</span><br><span class="line">ListNode* LinkedList::get(int i) &#123;</span><br><span class="line">	if (i&lt;0 || i&gt;this-&gt;size - 1) &#123;</span><br><span class="line">		throw out_of_range(&quot;invalid position&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	ListNode* curr = head;</span><br><span class="line">	for (int j = 0; j &lt; i; j++) &#123;</span><br><span class="line">		curr = curr-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	return curr;</span><br><span class="line">&#125;</span><br><span class="line">void LinkedList::updata(int i, eleType value) &#123;</span><br><span class="line">	this-&gt;get(i)-&gt;data = value;</span><br><span class="line">&#125;</span><br><span class="line">void LinkedList::show() &#123;</span><br><span class="line">	ListNode* curr = head;</span><br><span class="line">	while (curr)&#123;</span><br><span class="line">		cout &lt;&lt; curr-&gt;data &lt;&lt; &quot; &quot;;</span><br><span class="line">		curr = curr-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	LinkedList list;</span><br><span class="line">	for (int i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">		list.insert(i, i * 10);</span><br><span class="line">	&#125;</span><br><span class="line">	list.show();</span><br><span class="line">	list.remove(0);</span><br><span class="line">	list.show();</span><br><span class="line">	list.remove(8);</span><br><span class="line">	list.show();</span><br><span class="line">	list.updata(2, 22);</span><br><span class="line">	list.show();</span><br><span class="line">	if (list.find(22)) &#123;</span><br><span class="line">		cout &lt;&lt; &quot;存在&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		cout &lt;&lt; &quot;不存在&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	if (list.find(23)!=NULL) &#123;</span><br><span class="line">		cout &lt;&lt; &quot;存在&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		cout &lt;&lt; &quot;不存在&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechatpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2024/08/05/%E5%8D%95%E9%93%BE%E8%A1%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2024/07/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E4%BD%9C%E5%93%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一个哔哩哔哩作品</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8"><span class="toc-number">1.</span> <span class="toc-text">单链表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E6%8F%92%E5%85%A5"><span class="toc-number">1.1.</span> <span class="toc-text">单链表的插入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.1.1.</span> <span class="toc-text">插入的步骤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E5%88%A0%E9%99%A4"><span class="toc-number">1.2.</span> <span class="toc-text">单链表的删除</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.2.1.</span> <span class="toc-text">删除的步骤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E6%9F%A5%E6%89%BE"><span class="toc-number">1.3.</span> <span class="toc-text">单链表的查找</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.3.1.</span> <span class="toc-text">查找的步骤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E5%85%83%E7%B4%A0%E7%B4%A2%E5%BC%95"><span class="toc-number">1.4.</span> <span class="toc-text">单链表的元素索引</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E7%B4%A2%E5%BC%95%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.4.1.</span> <span class="toc-text">元素索引的步骤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E5%85%83%E7%B4%A0%E4%BF%AE%E6%94%B9"><span class="toc-number">1.5.</span> <span class="toc-text">单链表的元素修改</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.5.1.</span> <span class="toc-text">修改的步骤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.6.</span> <span class="toc-text">代码实现</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -239,9 +393,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
