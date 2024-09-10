@@ -182,19 +182,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="彩色螺旋线"><a href="#彩色螺旋线" class="headerlink" title="彩色螺旋线"></a>彩色螺旋线</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是开学来首次更新，被拖了还蛮久的，我不是一个爱给自己找借口的人，但是确实是开学以来太忙了。开学这三周，适应了一下新学期，调整了一下心态，最近还参加了数学建模比赛。建模的比赛场地在文翰楼，经过这三天的折磨，突然觉得文翰楼应该叫蚊翰楼，蚊子实在是有些多。没具体数叮了多少个包，但是光手上就叮了4个。事实上我只在那个教室过夜了一晚，并且大部分时间我是醒着的。也就是说，这些蚊子在白天，趁着我醒着，在我手上咬了四个包。那我就不禁要问了，现在的蚊子都这么叛逆吗？它们难道不知道这个眼前这个体型是它好几个数量级一般大的1.83成年男性人类对于它来说简直是个怪物吗，我的双手对于它不说是核武器级别但也至少可以说是火箭筒级别的战略威慑了。对于我这样有智慧的灵长类动物而言，如果我作为蚊子遇到我这样的对手，如果我的第一反应不是逃跑，我都要怀疑我脑子是不是出问题了。但真实情况是，我空有一身武力却毫无用武之地，虽然有时能乱挥双手拍死几只蚊子，但被叮咬的次数实在是远远不及打死蚊子的数量，如果这是一局游戏，我想我的战绩甚至还不如最近刚被踢成0：7的国足。从生存策略的角度来看，它们简直就是无比成功的。它们用最无脑的方式，用前扑后继的蚊海战术就解决了整个族群的生存和延续问题。突然就有点羡慕蚊子这样简单的生活方式了，要么就被一下拍死，为族群的延续牺牲，成为一个无私的牺牲者；要么就幸运的活下来，成为延续族群未来的英雄。而作为人呢，虽然我们号称自己有智慧，是地球上最聪明的动物，但是凭着这个我们引以为傲的智慧，很多人奋斗一生连成为一个普通人都要拼尽全力。所以有时候我就在想，人要是也能活得这样简单没有烦恼就好了，为此我愿意放弃这所谓的智慧。就像一句话说的，知识赐予我答案，以及更多无从解决的难题。<code>something for nothing.</code>一切都有代价，我想，这也许就是智慧的代价吧。好了，废话说的有点多了，但话又说回来，谁让这是我的博客呢，我想多说点怎么了？怎么了！</p>
-<h2 id="正式内容介绍"><a href="#正式内容介绍" class="headerlink" title="正式内容介绍"></a>正式内容介绍</h2><p>写这次博客的目的，主要是为了完成老师的一个分享作业，要求我们写博客分享，那我想，这正好是撞我枪口上了，上个学期搭的博客也算是有了用武之地，突然就有种相见恨晚的感觉。因为上的是数据分析与数据可视化，所以老师要求分享一些关于使用matplotlib画出的一些图及其代码。并且老师像我们推荐了一个网址，上面是各种各样的使用matplotlib画出的图，因此本次分享的关于图片和代码的内容就是来自于老师推荐的的这个网站，也就是下面的这个网址了。<br><br> <a target="_blank" rel="noopener" href="https://matplotlib.org/gallery.html">下面的这个网址</a><br> <br><br>网站的名字翻译过来叫做matplotlib画廊，有兴趣的小伙伴可以多去看看，从上面或许就可找到你喜欢的matplotlib图并且附有源代码，这使得我们不仅可以欣赏，还能在自己本地的环境上运行，或许我们可以发挥自己的创意，站在前人的肩膀上更进一步，画出更精美的图。我想，这也许就是开源的意义吧。好了，废话不多说。下面开始我的分享。（由于我的博客图片加载比较慢，为了防止到时候加载不出来，所以在此留存备用链接:<a target="_blank" rel="noopener" href="https://matplotlib.org/2.0.2/examples/pylab_examples/fill_spiral.html">备用链接</a>）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    bool picture;</span><br><span class="line">    cin &gt;&gt; picture;</span><br><span class="line">    cout &lt;&lt;endl;</span><br><span class="line">    if(picture)&#123;</span><br><span class="line">        cout &lt;&lt; &quot;请各位自行为括号里面的文字添加注释，即//。&quot; &lt;&lt;endl;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        cout &lt;&lt; &quot;点击备用链接。&quot;&lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2024/09/10/%E5%BD%A9%E8%89%B2%E8%9E%BA%E6%97%8B%E7%BA%BF/%E5%BD%A9%E8%89%B2%E8%9E%BA%E6%97%8B%E7%BA%BF.png%22%E5%BD%A9%E8%89%B2%E8%9E%BA%E6%97%8B%E7%BA%BF%22" alt="彩色螺旋线"><br><br></p>
-<p>如你所见，这是一个彩色的螺旋线，大概有多少颜色我懒得数了。反正有很多种颜色，为什么我会想分享这个图呢？有很多个原因。首先是跟最近的经历有关，前面提到，我最近参加了数学建模比赛，而数学建模当中的一个题目就跟螺旋线有关，不过我选的不是这个题目，如果我选的是这个题目的话，我一定会后悔为什么没有在那之前看到这个网站。另外一个原因就是觉得这个图确实很好看所以分享给大家。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">theta = np.arange(0, 8*np.pi, 0.1)</span><br><span class="line">a = 1</span><br><span class="line">b = .2</span><br><span class="line"></span><br><span class="line">for dt in np.arange(0, 2*np.pi, np.pi/2.0):</span><br><span class="line"></span><br><span class="line">    x = a*np.cos(theta + dt)*np.exp(b*theta)</span><br><span class="line">    y = a*np.sin(theta + dt)*np.exp(b*theta)</span><br><span class="line"></span><br><span class="line">    dt = dt + np.pi/4.0</span><br><span class="line"></span><br><span class="line">    x2 = a*np.cos(theta + dt)*np.exp(b*theta)</span><br><span class="line">    y2 = a*np.sin(theta + dt)*np.exp(b*theta)</span><br><span class="line"></span><br><span class="line">    xf = np.concatenate((x, x2[::-1]))</span><br><span class="line">    yf = np.concatenate((y, y2[::-1]))</span><br><span class="line"></span><br><span class="line">    p1 = plt.fill(xf, yf)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p>由于本人对于matplotlib了解不是很多，所以在此不做讲解，改兴趣的同学可以自行学习后对代码添加自己的创意，如果想在本地运行此代码，只需要有基础的python环境并且安装matplotlib库和numpy库，比较简单，在此不做赘述。今天的分享就到这里，谢谢各位读者的阅读。</p>
-<hr>
-如果喜欢我分享的内容，就请多多支持我吧，如果有实力可以点击下方的打赏，请我吃肯德基疯狂星期四。如果我创作的内容对你有帮助，就请多多转发我的博客链接，使更多的人能够看到。如果想和我交流，我的博客目前还未开放评论功能，但可以通过我主页的联系方式与我取得联系，更多内容敬请期待。你们的支持就是我创作的最大动力。
-
-
-
+        <h1 id="彩色螺旋线"><a href="#彩色螺旋线" class="headerlink" title="彩色螺旋线"></a>彩色螺旋线</h1>
+        
+          <a class="article-more-a" href="/2024/09/10/%E5%BD%A9%E8%89%B2%E8%9E%BA%E6%97%8B%E7%BA%BF/#more">more >></a>
+        
       
 
       
@@ -906,10 +897,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C++</a>
               </li>
              
@@ -939,6 +926,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">matplotlib</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
