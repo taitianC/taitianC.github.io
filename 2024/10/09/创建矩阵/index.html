@@ -17,7 +17,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2024/10/09/%E5%88%9B%E5%BB%BA%E7%9F%A9%E9%98%B5/1.jpg">
 <meta property="article:published_time" content="2024-10-09T14:41:16.000Z">
-<meta property="article:modified_time" content="2024-10-16T18:06:19.699Z">
+<meta property="article:modified_time" content="2024-10-16T18:13:37.858Z">
 <meta property="article:author" content="taitian">
 <meta property="article:tag" content="numpy">
 <meta property="article:tag" content="数据分析与可视化">
@@ -197,18 +197,15 @@
       
         <h1 id="创建矩阵"><a href="#创建矩阵" class="headerlink" title="创建矩阵"></a>创建矩阵</h1><span id="more"></span>
 <p>相信学习过线性代数的同学们对矩阵都不陌生，有没有同学记得在线性代数中我们是如何引入矩阵的吗？<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>在线性代数中，我们是通过一个n个未知数m个方程的方程组齐次线性方程组来引入矩阵的：</p>
-<p><img src="/2024/10/09/%E5%88%9B%E5%BB%BA%E7%9F%A9%E9%98%B5/1.jpg" alt="x" title="彩色螺旋线"></p>
-<p>我们把这样一个方程组叫做n元线性方程组,如果b1，b2,…..,bm,不全为0，那我们就把它叫做n元非齐次线性方程组，相反地，如果b1，b2,…..,bm,全为0，那就把它叫做n元齐次线性方程组。那么对于一个n元齐次线性方程组来说，我们很容易观察到一组解为：</p>
+<p><img src="/2024/10/09/%E5%88%9B%E5%BB%BA%E7%9F%A9%E9%98%B5/1.jpg" alt="x" title="彩色螺旋线"><br>我们把这样一个方程组叫做n元线性方程组,如果b1，b2,…..,bm,不全为0，那我们就把它叫做n元非齐次线性方程组，相反地，如果b1，b2,…..,bm,全为0，那就把它叫做n元齐次线性方程组。那么对于一个n元齐次线性方程组来说，我们很容易观察到一组解为：<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 , 0 , 0 ，……  ，0</span><br></pre></td></tr></table></figure>
-<p>那么对于一个n元非齐次线性方程组来说，在每个方程当中未知数的系数不全为0且任意两个方程的对应系数不是倍数的情况下，它有解的条件是什么？</p>
-<p>那么在本书中，在本章的开头当中对矩阵的介绍是比较少的，只有一段话：<br>矩阵与数组的概念有着本质的区别：①数组是计算机专业的概念，矩阵是数学专业的概念。②数组可以是一维、二维、三维或是其他任意维度的，矩阵只能且必须是二维的。③数组中可以包含任意类型的数组，矩阵中元素必须是数值。④数组乘法与矩阵乘法的规则不同。</p>
-<p>为了方便理解，用我们计算机专业当中的概念来强行解释的话，矩阵其实就是一个由数字组成的二维数组。非常简单的一句话，就对矩阵做出了两点限制：1、矩阵的元素只能是数字。2、矩阵的维度只能是二维。我在这里留一个问题，单个数字1是否是一个矩阵？我们先不着急回答。<br>那么在之前学习numpy数组的时候就了解过维度相关的概念，那么我想请一位同学帮我们回顾一下关于维度的相关知识：首先我们都知道当我们创建好一个数组对象之后，我们可以通过<code>.</code>运算符调用它的ndim属性来获取数组的维度。</p>
+<p>那么对于一个n元非齐次线性方程组来说，在每个方程当中未知数的系数不全为0且任意两个方程的对应系数不是倍数的情况下，它有解的条件是什么？<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>那么在本书中，在本章的开头当中对矩阵的介绍是比较少的，只有一段话：<br>矩阵与数组的概念有着本质的区别：①数组是计算机专业的概念，矩阵是数学专业的概念。②数组可以是一维、二维、三维或是其他任意维度的，矩阵只能且必须是二维的。③数组中可以包含任意类型的数组，矩阵中元素必须是数值。④数组乘法与矩阵乘法的规则不同。<br><br><br>为了方便理解，用我们计算机专业当中的概念来强行解释的话，矩阵其实就是一个由数字组成的二维数组。非常简单的一句话，就对矩阵做出了两点限制：1、矩阵的元素只能是数字。2、矩阵的维度只能是二维。我在这里留一个问题，单个数字1是否是一个矩阵？我们先不着急回答。<br>那么在之前学习numpy数组的时候就了解过维度相关的概念，那么我想请一位同学帮我们回顾一下关于维度的相关知识：首先我们都知道当我们创建好一个数组对象之后，我们可以通过<code>.</code>运算符调用它的ndim属性来获取数组的维度。<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line"># 创建一个NumPy数组</span><br><span class="line">arr = np.array([[1, 2, 3], [4, 5, 6]])</span><br><span class="line"></span><br><span class="line"># 获取数组的维度</span><br><span class="line">dimension = arr.ndim</span><br><span class="line"></span><br><span class="line">print(&quot;数组的维度是：&quot;, dimension)</span><br></pre></td></tr></table></figure>
 <p>得到的输出将会是：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">数组的维度是： 2</span><br></pre></td></tr></table></figure>
 <p>那如果我们创建一个这样的数组，它的元素个数只有一个，为数字1，像下面这样：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">y=np.array(1)</span><br><span class="line"></span><br><span class="line">dimension = y.ndim</span><br><span class="line"></span><br><span class="line">print(&quot;数组的维度是：&quot;, dimension)</span><br></pre></td></tr></table></figure>
-<p>得到的输出将会是：</p>
+<p>得到的输出将会是：<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">数组的维度是： 0</span><br></pre></td></tr></table></figure>
 <p>我们再举一个例子，同样是创建一个数组，同样，它的元素个数只有一个，为数字1，像下面这样：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">y=np.array([1])</span><br><span class="line"></span><br><span class="line">dimension = y.ndim</span><br><span class="line"></span><br><span class="line">print(&quot;数组的维度是：&quot;, dimension)</span><br></pre></td></tr></table></figure>
@@ -217,7 +214,7 @@
 
 <p>我们再举一个例子，同样是创建一个数组，同样，它的元素个数只有一个，为数字1，像下面这样：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">y=np.array([[1]])</span><br><span class="line"></span><br><span class="line">dimension = y.ndim</span><br><span class="line"></span><br><span class="line">print(&quot;数组的维度是：&quot;, dimension)</span><br></pre></td></tr></table></figure>
-<p>得到的输出将会是：</p>
+<p>得到的输出将会是：<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SyntaxError: closing parenthesis &#x27;)&#x27; does not match opening parenthesis &#x27;[&#x27;</span><br></pre></td></tr></table></figure>
 <p>然后接下来我们就开始讲我们今天正式的内容，创建矩阵：<br>那么在numpy中我们可以通过使用numpy库中的<code>matrix()</code>来创建一个矩阵，像下面这样：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = np.matrix([[1, 2, 3], [4, 5, 6]])</span><br><span class="line">x</span><br></pre></td></tr></table></figure>
@@ -236,20 +233,32 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = np.matrix(&#x27;1 2 3; 4 5 6&#x27;) # 矩阵创建的另一种形式</span><br><span class="line">print(x)</span><br><span class="line">print(x.shape)</span><br></pre></td></tr></table></figure>
 <p>在这里，我们输出这个矩阵，并且输出它的形状，输出结果为：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[[1 2 3]</span><br><span class="line"> [4 5 6]]</span><br><span class="line">(2, 3)</span><br></pre></td></tr></table></figure>
-<p>这里是书上提到的两种创建矩阵的方法，在这里问大家一个问题，还有其他创建矩阵的方法吗？<br>当然还有其他方法，我们可以通过给<code>matrix()</code>方法传一个数组的方式来创建一个矩阵，像下面这样：</p>
+<p>这里是书上提到的两种创建矩阵的方法，在这里问大家一个问题，还有其他创建矩阵的方法吗？<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>当然还有其他方法，我们可以通过给<code>matrix()</code>方法传一个数组的方式来创建一个矩阵，像下面这样：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">array = np.array([[1, 2, 3], [4, 5, 6]])</span><br><span class="line">matrix = np.matrix(array)</span><br><span class="line">print(matrix)</span><br><span class="line">print(matrix.shape)</span><br></pre></td></tr></table></figure>
 <p>输出结果为：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[[1 2 3]</span><br><span class="line"> [4 5 6]]</span><br><span class="line">(2, 3)</span><br></pre></td></tr></table></figure>
-<p>在这里再问大家一个问题，还有其他创建矩阵的方法吗？<br>当然还有，我们可以通过强制类型转换来创建一个矩阵，像下面这样：</p>
+<p>在这里再问大家一个问题，还有其他创建矩阵的方法吗？<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>当然还有，我们可以通过强制类型转换来创建一个矩阵，像下面这样：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">array = np.array([[1, 2, 3], [4, 5, 6]])</span><br><span class="line">matrix = np.asmatrix(array)</span><br><span class="line">print(matrix)</span><br><span class="line">print(matrix.shape)</span><br></pre></td></tr></table></figure>
 <p>输出结果为：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[[1 2 3]</span><br><span class="line"> [4 5 6]]</span><br><span class="line">(2, 3)</span><br></pre></td></tr></table></figure>
-<p>当然，无论是怎样创建矩阵，我们都要确保传递进来的参数是二可以表示一个二维的矩阵，如果传递进来的参数是不是一个二维的矩阵，那么就无法创建矩阵。就像下面这样：</p>
+<p>在这里再问大家一个问题，还有其他创建矩阵的方法吗？<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>当然，无论是怎样创建矩阵，我们都要确保传递进来的参数是二可以表示一个二维的矩阵，如果传递进来的参数是不是一个二维的矩阵，那么就无法创建矩阵。就像下面这样：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.matrix([[[1], [2], [3]]]) # ValueError: matrix must be 2-dimensional</span><br></pre></td></tr></table></figure>
-<p>那么回到最初的问题当中，单个数字1是否是一个矩阵呢？<br>如果它可以是一个矩阵，那么下面哪种方法可以成功创建一个一个只有一个元素1的矩阵呢？</p>
+<p>那么回到最初的问题当中，单个数字1是否是一个矩阵呢？<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>如果它可以是一个矩阵，那么下面哪种方法可以成功创建一个一个只有一个元素1的矩阵呢？<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">matrix= np.matrix(1)      #方法1</span><br><span class="line">matrix= np.matrix([1])    #方法2</span><br><span class="line">matrix= np.matrix(&#x27;1&#x27;)    #方法3</span><br><span class="line">matrix= np.matrix(&#x27;[1]&#x27;)  #方法4</span><br><span class="line">array = np.array(1)</span><br><span class="line">matrix= np.matrix(array)  #方法5</span><br><span class="line">matrix= np.matrix(array)  #方法6</span><br><span class="line"></span><br><span class="line">print(matrix)</span><br><span class="line">print(matrix.shape)</span><br></pre></td></tr></table></figure>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+答案就是，都可以：
 
-<p>答案就是，都可以：<br>并且创建出来的矩阵都是形状为一行一列的矩阵。</p>
+<p>并且创建出来的矩阵都是形状为一行一列的矩阵。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[[1]]</span><br><span class="line">(1, 1)</span><br></pre></td></tr></table></figure>
 <p>好了今天的讲解就到这里，感谢大家的观看。</p>
 
@@ -522,10 +531,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C++</a>
               </li>
              
@@ -543,6 +548,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">矩阵</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
